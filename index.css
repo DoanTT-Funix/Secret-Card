@@ -1,0 +1,87 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 18px;
+    background: #CED4DA; 
+	margin: 32px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+form label{
+	display: inline-block;
+	width: 100%;
+	
+	text-align:center;
+}
+  
+  button {
+    width: 80px;
+    height: 30px; }
+  
+  .cards {
+    width: 1040px;
+    max-width: 100%;
+    padding: 0;
+    margin: 10px auto; }
+  
+  .card {
+    height: 80px;
+    width: 50px;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 3px; }
+    .card.diamonds, .card.hearts {
+      color: #ed0000; }
+    .card.clubs, .card.spades {
+      color: #000000; }
+    .card.diamonds .suit:after {
+      content: '\2666'; }
+    .card.hearts .suit:after {
+      content: '\2665'; }
+    .card.clubs .suit:after {
+      content: '\2663'; }
+    .card.spades .suit:after {
+      content: '\2660'; }
+  
+  .rank.ace:after {
+    content: 'A'; }
+  
+  .rank.two:after {
+    content: '2'; }
+  
+  .rank.three:after {
+    content: '3'; }
+  
+  .rank.four:after {
+    content: '4'; }
+  
+  .rank.five:after {
+    content: '5'; }
+  
+  .rank.six:after {
+    content: '6'; }
+  
+  .rank.seven:after {
+    content: '7'; }
+  
+  .rank.eight:after {
+    content: '8'; }
+  
+  .rank.nine:after {
+    content: '9'; }
+  
+  .rank.ten:after {
+    content: '10'; }
+  
+  .rank.jack:after {
+    content: 'J'; }
+  
+  .rank.queen:after {
+    content: 'Q'; }
+  
+  .rank.king:after {
+    content: 'K'; }
+  

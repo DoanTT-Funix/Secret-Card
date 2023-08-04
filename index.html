@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52 Cards</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <label>Nhấn BẮT ĐẦU để chọn 21 lá bài ngẫu nhiên từ bộ bài Tây 52 lá, và bắt đầu chơi.</label>
+    
+    <button type="button" onclick="begin()">BẮT ĐẦU</button>
+	<br>
+    <div>
+        <form  action="">
+            <label for="ChonNhom">Lá bài bí mật của bạn ở nhóm nào?</label>
+            <br>
+            <select name="" id="ChonNhom">
+                <option>--Chọn Nhóm--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" onclick="tiepTuc()">TIẾP TỤC</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Các nhóm bạn đã từng chọn:</span><span id="nhomTungChon"></span>
+            <span>***</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Số lần chia:</span><span id="SoLanChia"></span>
+        </form>
+        
+    </div>
+   <br>
+   <button type="button" onclick="xemLichSu()">LỊCH SỬ</button>
+    <div id="cardsDisplay">
+        <ul class="cards" style="display: none;">
+            <li class="card diamonds"><span class="rank ace"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank two"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank three"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank four"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank five"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank six"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank seven"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank eight"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank nine"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank ten"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank jack"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank queen"></span> <span class="suit"></span></li>
+            <li class="card diamonds"><span class="rank king"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank ace"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank two"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank three"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank four"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank five"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank six"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank seven"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank eight"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank nine"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank ten"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank jack"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank queen"></span> <span class="suit"></span></li>
+            <li class="card clubs"><span class="rank king"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank ace"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank two"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank three"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank four"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank five"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank six"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank seven"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank eight"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank nine"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank ten"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank jack"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank queen"></span> <span class="suit"></span></li>
+            <li class="card hearts"><span class="rank king"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank ace"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank two"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank three"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank four"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank five"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank six"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank seven"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank eight"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank nine"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank ten"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank jack"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank queen"></span> <span class="suit"></span></li>
+            <li class="card spades"><span class="rank king"></span> <span class="suit"></span></li>
+        </ul>
+    </div>
+    <table>
+        <tr>
+            <!-- <th>Cột 1</th>
+            <th>Cột 2</th>
+            <th>Cột 3</th>
+            <th>Cột 4</th>
+            <th>Cột 5</th>
+            <th>Cột 6</th>
+            <th>Cột 7</th>             -->
+        </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div><span id="KetQua"></span></div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
